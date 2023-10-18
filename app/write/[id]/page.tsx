@@ -87,9 +87,9 @@ const Write = ({ params }: { params: PageParams }) => {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   form.setFieldsValue({ ...detailData });
-  // }, [detailData, form]);
+  useEffect(() => {
+    form.setFieldsValue({ ...detailData });
+  }, [detailData, form]);
 
   // const getDfaultFileList = (initialValues: any) =>
   //   initialValues
@@ -104,9 +104,9 @@ const Write = ({ params }: { params: PageParams }) => {
   //       })
   //     : [];
 
-  // // useEffect(() => {
-  // //   id && setFileList(getDfaultFileList(initialValues));
-  // // }, []);
+  // useEffect(() => {
+  //   id && setFileList(getDfaultFileList(initialValues));
+  // }, []);
 
   // useEffect(() => {
   //   const draggerProps: UploadProps = {
