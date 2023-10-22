@@ -185,16 +185,26 @@ const Detail = ({ params }: { params: PageParams }) => {
               justifyContent: "center",
               alignContent: "center",
               gap: "20px",
-              paddingTop: "20px",
+              padding: "20px 0 ",
             }}
           >
-            <Form.Item name="content" style={{ width: "60%" }}>
-              <TextArea placeholder="댓글을 입력하세요" />
-            </Form.Item>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "60%",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Form.Item name="content" style={{ width: "100%" }}>
+                <TextArea placeholder="댓글을 입력하세요" />
+              </Form.Item>
 
-            <Button type="primary" htmlType="submit">
-              등록하기
-            </Button>
+              <Button type="primary" htmlType="submit">
+                등록하기
+              </Button>
+            </div>
           </div>
         </Form>
       </div>
