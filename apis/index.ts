@@ -68,17 +68,7 @@ export async function getRestaurantList(
 }
 
 export async function addRestaurantContent(addData: RestaurantListType) {
-  const docRef = await addDoc(restaurantListCollection, {});
-
-  const { id } = docRef;
-  const docIdWithData = {
-    ...addData,
-    id,
-  };
-
-  await setDoc(docRef, docIdWithData);
-
-  return docIdWithData;
+  await addDoc(restaurantListCollection, addData);
 }
 
 export async function getRestaurantContentById(docId: string) {
@@ -112,6 +102,7 @@ export async function updateRestaurantContent(
     console.error("Document does not exist");
   }
 }
+
 export async function deleteRestaurantContent(id: string) {
   const projectDocRef = doc(restaurantListCollection, id);
 
